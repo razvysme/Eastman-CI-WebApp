@@ -6,10 +6,9 @@
     import Layout from '../routes/+layout.svelte';
     import MusicPage from "../routes/Music/+page.svelte";
     import LessonCounter from "./LessonCounter.svelte";
-
     import { setContext } from 'svelte';
 
-    export let trackIndex;
+    export let trackIndex = 1;
 
     let trackTitle = audioData[trackIndex].name;
     let trackArtist = audioData[trackIndex].artist;
@@ -19,14 +18,14 @@
         // Action to perform when the div is clicked
         setContext('trackIndex', trackIndex);
         console.log("Div clicked!");
-        //console.log(trackIndex);
+        console.log(trackIndex);
         goto(`/Music`);
     }
 </script>
 
 <Router>
     <Layout>
-      <Route path="/Music" component={MusicPage} /><Route/>
+      <Route path='/Music' component={MusicPage} /><Route/>
     </Layout>
 </Router>
 

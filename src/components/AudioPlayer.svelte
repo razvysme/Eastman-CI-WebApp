@@ -1,14 +1,17 @@
 <script>
 	import { audioData } from '../audioData.js';
-	
+	import { goto } from '$app/navigation';
 	import TrackHeading from './TrackHeading.svelte';
 	import ProgressBarTime from './ProgressBarTime.svelte';
 	import Controls from './Controls.svelte';
 	import VolumeSlider from './VolumeSlider.svelte';
 	import PlayList from './PlayList.svelte';
+	import { Router, Route } from 'svelte-routing';
+	import SelectionPage from '../routes/Selection/+page.svelte';
+	import Layout from '../routes/+layout.svelte';
 	
 	// Get Audio track
-	export let  trackIndex= 0;
+	export let  trackIndex = 1;
 	// $: console.log(trackIndex)
 	let audioFile = new Audio(audioData[trackIndex].url);
 	let trackTitle = audioData[trackIndex].name;
@@ -124,7 +127,19 @@
 			playPauseAudio(); // auto play
 		}
 	}
+
+	function goBack()
+	{
+		goto("/Selection");
+	}
+	
 </script>
+
+<Router>
+	<Layout>
+		<Route path="/Selection" component={SelectionPage} /><Route/>
+	</Layout>
+</Router>
 
 
 <main>
@@ -143,6 +158,21 @@
 							on:forward={forwardAudio} />
 		
 	</section>
+	
+	<div class="flex justify-between items-start space-x-3">
+		<button
+			type="button"
+			class="my-11 self-start flex-1/2 sm:flex-1/3 md:flex-1/2 lg:flex-1/2 xl:flex-1/2 shadow-sm rounded bg-sky-500 hover:bg-sky-600 text-lg text-white py-2 px-4"
+			on:click={goBack}
+			>
+			Back
+	 	 </button>
+
+		<div class="flex-1"> <!-- Add flex-1 class to make PlayList fill the available space -->
+    		<PlayList on:click={handleTrack} />
+  		</div>
+	</div>
+
 	
 </main>
 

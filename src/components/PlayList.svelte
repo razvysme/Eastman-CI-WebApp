@@ -8,15 +8,13 @@
 
 
 <section id="playlist-cont">
-	<button class="accordion"
+	<button class="accordion border border-gray-300 p-2 rounded-lg"
 					class:active={listIsShowing}
-					on:click={showPlayList}>&#9776; Playlist</button>
+					on:click={showPlayList}>&#9776; Lesson List</button>
 
 	<ul class:show-list={listIsShowing}>
 		{#each audioData as {name, url}, i}
-		<li data-track-id={i}
-				on:click>
-			{name}</li>
+		<li data-track-id={i} on:click> {name} </li>
 		{/each}
 	</ul>
 </section>
@@ -24,16 +22,13 @@
 
 <style>
 	section#playlist-cont {
-		width: 298px;	
-		box-shadow: 0 0 5px #222;
-		border-radius: 0 0 5px 5px;
-		background: #333;
+		border: 1px solid #8d9094;
+    	border-radius: 0.5rem;
+    	background-color: #FFFFFF;
 	}
 	
 	/* Style the buttons that are used to open and close the accordion panel */
 	button.accordion {		
-		background: #222;
-		color: #bbb;
 		margin: 0;
 		padding: 5px 15px;
 		width: 100%;
@@ -46,14 +41,11 @@
 
 	/* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
 	button.active {
-		background-color: #888;
-		color: black;
+		color: #DD6B20;
 	}
 	
 	ul {
 		list-style-type: none;
-		background: #222;
-		color: #ddd;
 		margin: 0;
 		padding: 0;
 		border-radius: 0 0 5px 5px;
@@ -65,15 +57,15 @@
 	li {
 		line-height: 150%;
 		padding: 5px 5px 5px 20px;
-		border-bottom: 1px solid #ddd;
+		border-bottom: 1px solid #3a3a3a;
 		cursor: pointer;
 	}
 	
 	li:active, li:hover {
-		background-color: #444;
+		background-color: #60A5FA;
 	}
 	
 	.show-list {
-		height: 150px;
+		height: 180px;
 	}
 </style>

@@ -3,16 +3,27 @@
     import {usrs} from "../stores/loginStore.js";
     import { Router, Route } from 'svelte-routing';
     import Layout from "./+layout.svelte";
+    import AudioTest from "../components/AudioTest.svelte";
+    import { getContext } from 'svelte';
+  
+    let usr = getContext('usr');
+    //console.log(usr);
+    
 </script>
 
 <Router>
-    <Layout>
-      <Route path="/Music"/><Route/>
-    </Layout>
-  </Router>
+  <Layout>
+    <Route path="/Selection"/><Route/>
+  </Layout>
+</Router>
+
 
 <main>
-    <h1 class = "text-2xl fond-bold text-center text-gray-800 md:text-3xl">Music Training</h1>
-    <LoginForm/>
+  {#if !usr}
+    <LoginForm />
+    {:else}
+    <AudioTest/>
+  {/if}
 </main>
+
 

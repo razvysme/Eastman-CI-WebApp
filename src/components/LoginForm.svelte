@@ -6,11 +6,15 @@
     import { Router, Route } from 'svelte-routing';
     import Layout from '../routes/+layout.svelte';
     import SelectionPage from '../routes/Selection/+page.svelte';
+    
+    const animal = "Torsk2"
+
     const handleSubmit = () => {
         //addUsr(usr);
         //console.log(usr)
-        usr='';
+        //usr='';
         goto('/Selection');
+        document.cookie = `usr=${usr};max-age=31536000;path="/"`;
     }
 </script>
 
@@ -23,7 +27,7 @@
 
 <form class="my-11 " on:submit|preventDefault={handleSubmit}>
     <div class="flex flex-col text-lg mb-2">
-        <label class="font-bold mb-2 text-gray-800" for="todo">First, we need to know who you are</label>
+        <h3 class="font-bold mb-3 text-left text-cr text-gray-700">First, we need to know who you are</h3>
         <input type="text" bind:value={usr} name="todo" placeholder="Insert your animal name here" 
             class="appearance-none shadow-sm border border-gray-200 p-2 
             focus:outline-none focus:border-gray-500 rounded-lg"/>
