@@ -7,7 +7,7 @@
     import Layout from '../routes/+layout.svelte';
     import SelectionPage from '../routes/Selection/+page.svelte';
     
-    const animal = "Torsk2"
+    const animal = "Torsk2";
 
     const handleSubmit = () => {
         //addUsr(usr);

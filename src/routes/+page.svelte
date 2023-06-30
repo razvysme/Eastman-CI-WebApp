@@ -5,6 +5,7 @@
     import Layout from "./+layout.svelte";
     import AudioTest from "../components/AudioTest.svelte";
     import { getContext } from 'svelte';
+    import { goto } from '$app/navigation';
   
     let usr = getContext('usr');
     //console.log(usr);
@@ -22,7 +23,7 @@
   {#if !usr}
     <LoginForm />
     {:else}
-    <AudioTest/>
+   {goto('/AudioTest')}
   {/if}
 </main>
 

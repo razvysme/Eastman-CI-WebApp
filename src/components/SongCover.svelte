@@ -6,19 +6,18 @@
     import Layout from '../routes/+layout.svelte';
     import MusicPage from "../routes/Music/+page.svelte";
     import LessonCounter from "./LessonCounter.svelte";
-    import { setContext } from 'svelte';
+    import { currentTrack } from './../stores/trackIndexStore.js';
 
     export let trackIndex = 1;
 
     let trackTitle = audioData[trackIndex].name;
     let trackArtist = audioData[trackIndex].artist;
     let coverArt = audioData[trackIndex].cover;
+    //console.log(audioData[0], audioData[5], audioData[10],audioData[15]);
     
     function handleClick() {
-        // Action to perform when the div is clicked
-        setContext('trackIndex', trackIndex);
-        console.log("Div clicked!");
         console.log(trackIndex);
+        currentTrack.set(trackIndex); // Set the value of trackIndex
         goto(`/Music`);
     }
 </script>
@@ -36,7 +35,7 @@
             <img src={coverArt} alt="Cover Art">
             <TrackHeading artist={trackArtist} trackTitle={trackTitle}/>
             <h3 class="mb-0.5 text-orange-600 text-left">Listened</h3>
-            <LessonCounter trackIndex={trackIndex}/>
+            <LessonCounter trackIndex={trackIndex % 4}/>
         </section>
     </main>
 </button>

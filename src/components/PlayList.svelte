@@ -2,19 +2,24 @@
 	import { audioData } from '../audioData.js';
 	
 	let listIsShowing = false;
-	
-	const showPlayList = () => listIsShowing = !listIsShowing
-</script>
 
+	export let song = 0;
+	let truncAudioData = audioData.slice(song, song + 5);
+	//console.log(truncAudioData);
+	
+	const showPlayList = () => listIsShowing = !listIsShowing;
+
+</script>
 
 <section id="playlist-cont">
 	<button class="accordion border border-gray-300 p-2 rounded-lg"
-					class:active={listIsShowing}
-					on:click={showPlayList}>&#9776; Lesson List</button>
+		class:active={listIsShowing}
+		on:click={showPlayList}>&#9776; Lesson List
+	</button>
 
 	<ul class:show-list={listIsShowing}>
-		{#each audioData as {name, url}, i}
-		<li data-track-id={i} on:click> {name} </li>
+		{#each truncAudioData as {lesson}, i}
+			<li data-track-id={i} on:click> {lesson}</li>
 		{/each}
 	</ul>
 </section>

@@ -7,21 +7,20 @@
   //console.log(supabase);
 
   let usr;
+  export const trackIndex = 0;
 
   try {
     const usrCookie = document.cookie.split('; ').find(cookie => cookie.startsWith('usr='));
-
-  if (usrCookie) {
-    usr = usrCookie.split('=')[1];
-    console.log('Cookies exist:', usr);
-    setContext('usr', usr);
-  } else {
-    throw new Error('No cookies found');
+    if (usrCookie) {
+      usr = usrCookie.split('=')[1];
+      //console.log('usr cookie exists:', usr);
+      setContext('usr', usr);
+    } else {
+      throw new Error('No usr cookie found');
+    }
+    } catch (error) {
+      console.log(error.message);
   }
-} catch (error) {
-  console.log(error.message);
-}
-
 </script>
 
 

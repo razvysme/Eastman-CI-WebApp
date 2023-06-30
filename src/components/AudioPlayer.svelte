@@ -9,6 +9,7 @@
 	import { Router, Route } from 'svelte-routing';
 	import SelectionPage from '../routes/Selection/+page.svelte';
 	import Layout from '../routes/+layout.svelte';
+	import {listenMatrix} from './../stores/trackIndexStore.js';
 	
 	// Get Audio track
 	export let  trackIndex = 1;
@@ -18,9 +19,8 @@
 	let trackArtist = audioData[trackIndex].artist;
 	let coverArt = audioData[trackIndex].cover;
 
-
-	
 	const loadTrack = () => {
+		//console.log(trackIndex);
 		audioFile = new Audio(audioData[trackIndex].url);
 		audioFile.onloadedmetadata = () => {
 			totalTrackTime = audioFile.duration;
@@ -43,7 +43,7 @@
 	
 	// Track Duration and Progress Bar
 	let totalTrackTime;
-	$: console.log(totalTrackTime)
+	//$: console.log(totalTrackTime)
 	audioFile.onloadedmetadata = () => {
 		totalTrackTime = audioFile.duration;
 		updateTime();
@@ -82,22 +82,22 @@
 		if (audioFile.ended) {
 			isPlaying = false;
 			clearInterval(trackTimer);
-			console.log(`Ended = ${audioFile.ended}`);	
+			//console.log(`Ended = ${audioFile.ended}`);	
 		} else {
 			trackTimer = setInterval(updateTime, 100);
 		}
 	}
 	
-
 	// Controls
 	let isPlaying = false;
-	$: console.log(`isPlaying = ${isPlaying}`)
+	//$: console.log(`isPlaying = ${isPlaying}`)
 	
 	const playPauseAudio = () => {
 		if (audioFile.paused) {
 			toggleTimeRunning()
 			audioFile.play();
 			isPlaying = true;
+			checkAudioProgress();
 		} else {
 			toggleTimeRunning()
 			audioFile.pause();
@@ -112,17 +112,20 @@
 	let vol = 50;
 	const adjustVol = () => audioFile.volume = vol / 100; 
 	
-	
 	// Playlist
+	const staticTrackIndex = trackIndex;
+	let lessonIndex = 0;
 	const handleTrack = (e) => {
 		if (!isPlaying) {
-			trackIndex = Number(e.target.dataset.trackId);
+			lessonIndex = Number(e.target.dataset.trackId);
+			trackIndex = lessonIndex + staticTrackIndex;
 			loadTrack();
 			playPauseAudio(); // auto play
 		} else {
 			isPlaying = false;
 			audioFile.pause();
-			trackIndex = Number(e.target.dataset.trackId);
+			lessonIndex = Number(e.target.dataset.trackId);
+			trackIndex = lessonIndex + staticTrackIndex;
 			loadTrack();
 			playPauseAudio(); // auto play
 		}
@@ -130,17 +133,55 @@
 
 	function goBack()
 	{
+		audioFile.pause();
 		goto("/Selection");
+	}
+
+	function getTrackNumber(number) {
+		if (number >= 0 && number <= 3) {
+			return 0;
+		} else if (number >= 4 && number <= 7) {
+			return 1;
+		} else if (number >= 8 && number <= 11) {
+			return 2;
+		} else if (number >= 12 && number <= 15) {
+			return 3;
+		} else {
+			return -1;
+		}
+	}
+
+	let trackNr = getTrackNumber(trackIndex);
+	let checkProgressInterval;
+	async function checkAudioProgress() {
+	clearInterval(checkProgressInterval); // Clear any existing intervals
+	
+		checkProgressInterval = setInterval(async () => {
+			// Check if audioFile is playing
+			if (!audioFile.paused) {
+				const currentTime = audioFile.currentTime;
+				const totalDuration = audioFile.duration;
+				
+			// Check if audio has played over 75% of its length
+				if ((currentTime / totalDuration) > 0.02) {
+					console.log("Audio has passed 75% of its length!" + trackNr + " " + lessonIndex);
+					listenMatrix[trackNr][lessonIndex] = 1;
+					const listenMatrixString = JSON.stringify(listenMatrix);
+					document.cookie = `listenMatrix=${encodeURIComponent(listenMatrixString)}; max-age=31536000;path="/"`;
+					clearInterval(checkProgressInterval); // Stop checking progress until a sound starts again
+				}
+			}
+		}, 5000); // Check every 5 seconds
 	}
 	
 </script>
 
-<Router>
-	<Layout>
-		<Route path="/Selection" component={SelectionPage} /><Route/>
-	</Layout>
-</Router>
-
+<style>
+    .custom-padding {
+        padding-top: 4px;
+        padding-bottom: 4px;
+    }
+</style>
 
 <main>
 	<section id="player-cont">
@@ -159,20 +200,20 @@
 		
 	</section>
 	
-	<div class="flex justify-between items-start space-x-3">
+	<div class="flex justify-between items-start self-start space-x-2">
 		<button
 			type="button"
-			class="my-11 self-start flex-1/2 sm:flex-1/3 md:flex-1/2 lg:flex-1/2 xl:flex-1/2 shadow-sm rounded bg-sky-500 hover:bg-sky-600 text-lg text-white py-2 px-4"
+			class="shadow-sm rounded bg-sky-500 hover:bg-sky-600 text-lg text-white py-1 px-4 custom-padding"
 			on:click={goBack}
 			>
 			Back
 	 	 </button>
 
-		<div class="flex-1"> <!-- Add flex-1 class to make PlayList fill the available space -->
-    		<PlayList on:click={handleTrack} />
+		<div class="flex-1"> 
+    		<PlayList song = {trackIndex} on:click={handleTrack} />
   		</div>
-	</div>
-
-	
+	</div>	
 </main>
+
+
 

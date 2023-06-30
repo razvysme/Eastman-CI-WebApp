@@ -1,19 +1,12 @@
 <script>
     import Circle from './Circle.svelte';
-    //import listensMatrix from "../stores/listenStore.js";
+    import { listenMatrix } from "./../stores/trackIndexStore.js";
+    
     let completedColor = '#DD6B20'
     let incompletedColor = '#C4C4C4'
 
     export let trackIndex = 1;
-
-    export const listensMatrix = [
-                [1, 1, 0, 0, 0],
-                [0, 0, 1, 0, 0],
-                [1, 1, 1, 1, 1],
-                [1, 0, 0, 0, 0],
-                ];
-
-    let rowData = listensMatrix[trackIndex];
+    let rowData = listenMatrix[trackIndex];
 
     function getColor(value) {
         return value === 1 ? completedColor : incompletedColor;

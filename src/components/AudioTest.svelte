@@ -23,13 +23,17 @@
         audioFile.play();
     }
 
-    playTestAudio();
+    onMount(() => {
+    //playTestAudio(); // Call the function when the component is mounted
+    console.log("Mounting test audio...");
+  });
+
 </script>
 
 <style>
     .text-cr {
       /* Custom text size */
-      font-size: 1.3rem; 
+      font-size: 1.3rem; /* Adjust the size value as needed */
     }
   </style>
 
