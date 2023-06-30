@@ -6,6 +6,7 @@
   import { setContext } from 'svelte';
   //console.log(supabase);
 
+  export const prerender = true;
   let usr;
   export const trackIndex = 0;
 
