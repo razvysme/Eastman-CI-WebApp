@@ -9,7 +9,7 @@
     import { onMount } from 'svelte';
     
     const animal = "Torsk2";
-    const audioFile = new Audio("src/lib/audio/Chimes.mp3");
+    const audioFile = new Audio("https://raw.githubusercontent.com/razvysme/CI-Training-WebApp/main/src/lib/audio/Chimes.mp3");
     const handleSubmit = () => {
         //addUsr(usr);
         //console.log(usr)
@@ -51,14 +51,14 @@
         <h1 class="mb-2 text-gray-500 text-base text-left">If not, here are the steps to make it work:</h1>
         
         <div class="flex items-center mb-3">
-            <img class="w-24 h-24 rounded-full mr-2" src="src/lib/img/SpeakerIcon.png" alt="Speaker Image">
+            <img class="w-24 h-24 rounded-full mr-2" src="https://raw.githubusercontent.com/razvysme/CI-Training-WebApp/main/src/lib/img/SpeakerIcon.png" alt="Speaker Image">
             <div>
               <h3 class="mb-0.5 text-gray-800">Turn on the speaker</h3>
               <p class="text-gray-500 text-xs">Hold the power button on the top of the speaker for 3 seconds, until you hear the "turn on" sound. If nothing happens, it's probably out of battery, so connect the charging cable.</p>
             </div>
         </div>
         <div class="flex items-center">
-            <img class="w-24 h-24 rounded-full mr-2" src="src/lib/img/BtIcon.png" alt="Speaker Image">
+            <img class="w-24 h-24 rounded-full mr-2" src="https://raw.githubusercontent.com/razvysme/CI-Training-WebApp/main/src/lib/img/BtIcon.png" alt="Speaker Image">
             <div>
               <h3 class="mb-0.5 text-gray-800">Connect to the speaker</h3>
               <p class="text-gray-500 text-xs">In your phone, go to <span class="font-bold">Settings</span>, find <span class="font-bold">Bluetooth</span> and select <span class="font-bold">SoundCore 2</span>. If the name is not on the list, hold the <span class="font-bold">Bluetooth</span> button on the speaker until it starts blinking and wait for it to appear on the list so you can select it on the phone.</p>
