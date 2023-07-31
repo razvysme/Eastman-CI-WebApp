@@ -1,29 +1,22 @@
 <script>
     let usr = '';
     import { goto } from '$app/navigation';
-    import {addUsr} from "../stores/loginStore.js";
-    import MusicPage from "../routes/Music/+page.svelte";
-    import { Router, Route } from 'svelte-routing';
-    import Layout from '../routes/+layout.svelte';
-    import SelectionPage from '../routes/Selection/+page.svelte';
-    
+    import { browser } from '$app/environment';
+
     const animal = "Torsk2";
 
     const handleSubmit = () => {
         //addUsr(usr);
         //console.log(usr)
         //usr='';
+        if (browser) {
+            document.cookie = `usr=${usr};max-age=31536000;path="/"`;
+            };
         goto('/Selection');
-        document.cookie = `usr=${usr};max-age=31536000;path="/"`;
     }
 </script>
 
-<Router>
-    <Layout>
-      <Route path="/Music" component={MusicPage} /><Route/>
-      <Route path="/Selection" component={SelectionPage} /><Route/>
-    </Layout>
-</Router>
+
 
 <form class="my-11 " on:submit|preventDefault={handleSubmit}>
     <div class="flex flex-col text-lg mb-2">

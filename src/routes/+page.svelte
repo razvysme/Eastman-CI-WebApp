@@ -1,8 +1,7 @@
 <script>
     import LoginForm from "../components/LoginForm.svelte";
     import {usrs} from "../stores/loginStore.js";
-    import { Router, Route } from 'svelte-routing';
-    import Layout from "./+layout.svelte";
+    //import Layout from "./+layout.svelte";
     import AudioTest from "../components/AudioTest.svelte";
     import { getContext } from 'svelte';
     import { goto } from '$app/navigation';
@@ -11,13 +10,6 @@
     //console.log(usr);
     
 </script>
-
-<Router>
-  <Layout>
-    <Route path="/Selection"/><Route/>
-  </Layout>
-</Router>
-
 
 <main>
   {#if !usr}

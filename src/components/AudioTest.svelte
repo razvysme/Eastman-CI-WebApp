@@ -1,15 +1,12 @@
 <script>
     let usr = '';
     import { goto } from '$app/navigation';
-    import {addUsr} from "../stores/loginStore.js";
-    import MusicPage from "../routes/Music/+page.svelte";
-    import { Router, Route } from 'svelte-routing';
-    import Layout from '../routes/+layout.svelte';
-    import SelectionPage from '../routes/Selection/+page.svelte';
     import { onMount } from 'svelte';
     
     const animal = "Torsk2";
     const audioFile = new Audio("https://raw.githubusercontent.com/razvysme/CI-Training-WebApp/main/src/lib/audio/Chimes.mp3");
+    //const audioFile = new Audio("src/lib/audio/Chimes.mp3");
+
     const handleSubmit = () => {
         //addUsr(usr);
         //console.log(usr)
@@ -24,7 +21,7 @@
     }
 
     onMount(() => {
-    //playTestAudio(); // Call the function when the component is mounted
+    playTestAudio(); // Call the function when the component is mounted
     console.log("Mounting test audio...");
   });
 
@@ -37,12 +34,7 @@
     }
   </style>
 
-<Router>
-    <Layout>
-      <Route path="/Music" component={MusicPage} /><Route/>
-      <Route path="/Selection" component={SelectionPage} /><Route/>
-    </Layout>
-</Router>
+
 
 <form class="my-11 " on:submit|preventDefault={handleSubmit}>
     <div class="flex flex-col text-lg">

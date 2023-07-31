@@ -4,12 +4,14 @@
 	import TrackHeading from './TrackHeading.svelte';
 	import ProgressBarTime from './ProgressBarTime.svelte';
 	import Controls from './Controls.svelte';
-	import VolumeSlider from './VolumeSlider.svelte';
+	//import VolumeSlider from './VolumeSlider.svelte';
 	import PlayList from './PlayList.svelte';
-	import { Router, Route } from 'svelte-routing';
-	import SelectionPage from '../routes/Selection/+page.svelte';
-	import Layout from '../routes/+layout.svelte';
+	//import { Router, Route } from 'svelte-routing';
+	//import SelectionPage from '../routes/Selection/+page.svelte';
+	//import Layout from '../routes/+layout.svelte';
 	import {listenMatrix} from './../stores/trackIndexStore.js';
+	import { browser } from '$app/environment';
+
 	
 	// Get Audio track
 	export let  trackIndex = 1;
@@ -167,7 +169,11 @@
 					console.log("Audio has passed 75% of its length!" + trackNr + " " + lessonIndex);
 					listenMatrix[trackNr][lessonIndex] = 1;
 					const listenMatrixString = JSON.stringify(listenMatrix);
-					document.cookie = `listenMatrix=${encodeURIComponent(listenMatrixString)}; max-age=31536000;path="/"`;
+					if (browser) {
+						document.cookie = `listenMatrix=${encodeURIComponent(listenMatrixString)}; max-age=31536000;path="/"`;
+					};
+
+					
 					clearInterval(checkProgressInterval); // Stop checking progress until a sound starts again
 				}
 			}

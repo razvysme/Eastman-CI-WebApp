@@ -2,7 +2,7 @@
     import { audioData } from '../audioData.js';
     import TrackHeading from './TrackHeading.svelte';
     import { goto } from '$app/navigation';
-    import { Router, Route } from 'svelte-routing';
+    //import { Router, Route } from 'svelte-routing';
     import Layout from '../routes/+layout.svelte';
     import MusicPage from "../routes/Music/+page.svelte";
     import LessonCounter from "./LessonCounter.svelte";
@@ -22,11 +22,7 @@
     }
 </script>
 
-<Router>
-    <Layout>
-      <Route path='/Music' component={MusicPage} /><Route/>
-    </Layout>
-</Router>
+
 
 
 <button class="border border-gray-300 p-2 rounded-lg" on:click={handleClick}>
