@@ -225,7 +225,7 @@
 			class="shadow-sm rounded bg-sky-500 hover:bg-sky-600 text-lg text-white py-1 px-4 custom-padding"
 			on:click={goBack}
 			>
-			Back
+			Tilbage
 	 	 </button>
 
 		<div class="flex-1"> 
