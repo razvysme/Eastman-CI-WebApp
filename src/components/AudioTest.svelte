@@ -2,17 +2,14 @@
     let usr = '';
     import { goto } from '$app/navigation';
     import { onMount } from 'svelte';
-    
+    import { browser } from '$app/environment'; 
     const animal = "Torsk2";
-    const audioFile = new Audio("https://raw.githubusercontent.com/razvysme/CI-Training-WebApp/main/src/lib/audio/Chimes.mp3");
-    //const audioFile = new Audio("src/lib/audio/Chimes.mp3");
+    let audioFile;
 
-    const handleSubmit = () => {
-        //addUsr(usr);
-        //console.log(usr)
-        //usr='';
-        goto('/Selection');
-    };
+    if (browser) {
+     audioFile = new Audio("https://raw.githubusercontent.com/razvysme/CI-Training-WebApp/main/src/lib/audio/Chimes.mp3");
+      //const audioFile = new Audio("src/lib/audio/Chimes.mp3");
+    }
 
     function playTestAudio() 
     {
@@ -21,10 +18,16 @@
     }
 
     onMount(() => {
-    playTestAudio(); // Call the function when the component is mounted
-    console.log("Mounting test audio...");
-  });
+      playTestAudio(); // Call the function when the component is mounted
+      console.log("Mounting test audio...");
+    });
 
+    const handleSubmit = () => {
+        //addUsr(usr);
+        //console.log(usr)
+        //usr='';
+        goto('/Selection');
+    };
 </script>
 
 <style>
@@ -33,8 +36,6 @@
       font-size: 1.3rem; /* Adjust the size value as needed */
     }
   </style>
-
-
 
 <form class="my-11 " on:submit|preventDefault={handleSubmit}>
     <div class="flex flex-col text-lg">

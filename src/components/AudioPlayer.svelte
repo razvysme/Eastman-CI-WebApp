@@ -16,17 +16,27 @@
 	// Get Audio track
 	export let  trackIndex = 1;
 	// $: console.log(trackIndex)
-	let audioFile = new Audio(audioData[trackIndex].url);
-	let trackTitle = audioData[trackIndex].name;
-	let trackArtist = audioData[trackIndex].artist;
-	let coverArt = audioData[trackIndex].cover;
+	let audioFile;
+	let trackTitle;
+	let trackArtist;
+	let coverArt;
+
+	if (browser){
+		audioFile = new Audio(audioData[trackIndex].url);
+		trackTitle = audioData[trackIndex].name;
+		trackArtist = audioData[trackIndex].artist;
+		coverArt = audioData[trackIndex].cover;
+	}
 
 	const loadTrack = () => {
-		//console.log(trackIndex);
-		audioFile = new Audio(audioData[trackIndex].url);
-		audioFile.onloadedmetadata = () => {
-			totalTrackTime = audioFile.duration;
-			updateTime();
+		console.log(trackIndex);
+		
+		if (browser) {
+			audioFile = new Audio(audioData[trackIndex].url);
+			audioFile.onloadedmetadata = () => {
+				totalTrackTime = audioFile.duration;
+				updateTime();
+			}	
 		}
 		trackTitle = audioData[trackIndex].name;
 	}
@@ -46,10 +56,13 @@
 	// Track Duration and Progress Bar
 	let totalTrackTime;
 	//$: console.log(totalTrackTime)
-	audioFile.onloadedmetadata = () => {
-		totalTrackTime = audioFile.duration;
-		updateTime();
+	if (browser){
+		audioFile.onloadedmetadata = () => {
+			totalTrackTime = audioFile.duration;
+			updateTime();
+		}
 	}
+
 	
 	let totalTimeDisplay = "loading...";
 	let currTimeDisplay = "0:00:00";
