@@ -1,163 +1,115 @@
 export const audioData = [
 	{
-		id: 1,
-		name: "First Song",
-		lesson: "Lesson 1",
-		artist: "RPA",
-		url: "https://raw.githubusercontent.com/razvysme/CI-Training-WebApp/main/src/lib/audio/03.mp3",
+		name: "Imagine",
+		lesson: "Lektion 1",
+		artist: "John Lenon",
+		url: "https://raw.githubusercontent.com/razvysme/CI-Training-WebApp/main/src/lib/audio/1-1.mp3",
 		cover: "https://raw.githubusercontent.com/razvysme/CI-Training-WebApp/main/src/lib/img/1.png"
 	},
 	{
-		id: 2,
-		name: "First Song",
-		lesson: "Lesson 2",
-		artist: "RPA",
-		url: "https://raw.githubusercontent.com/razvysme/CI-Training-WebApp/main/src/lib/audio/03.mp3",
+		name: "Imagine",
+		lesson: "Lektion 2",
+		artist: "John Lenon",
+		url: "https://raw.githubusercontent.com/razvysme/CI-Training-WebApp/main/src/lib/audio/1-2.mp3",
 		cover: "https://raw.githubusercontent.com/razvysme/CI-Training-WebApp/main/src/lib/img/1.png"
 	},
 	{
-		id: 3,
-		name: "First Song",
-		lesson: "Lesson 3",
-		artist: "RPA",
-		url: "https://raw.githubusercontent.com/razvysme/CI-Training-WebApp/main/src/lib/audio/03.mp3",
+		name: "Imagine",
+		lesson: "Lektion 3",
+		artist: "John Lenon",
+		url: "https://raw.githubusercontent.com/razvysme/CI-Training-WebApp/main/src/lib/audio/1-3.mp3",
 		cover: "https://raw.githubusercontent.com/razvysme/CI-Training-WebApp/main/src/lib/img/1.png"
 	},
 	{
-		id: 4,
-		name: "First Song",
-		lesson: "Lesson 4",
-		artist: "RPA",
-		url: "/src/lib/audio/03.mp3",
-		cover: "/src/lib/img/1.png"
+		name: "Imagine",
+		lesson: "Lektion 4",
+		artist: "John Lenon",
+		url: "https://raw.githubusercontent.com/razvysme/CI-Training-WebApp/main/src/lib/audio/1-4.mp3",
+		cover: "https://raw.githubusercontent.com/razvysme/CI-Training-WebApp/main/src/lib/img/1.png"
 	},
+	
 	{
-		id: 5,
-		name: "First Song",
-		lesson: "Lesson 5",
-		artist: "RPA",
-		url: "/src/lib/audio/03.mp3",
-		cover: "/src/lib/img/1.png"
-	},
-	{
-		id: 1,
-		name: "Second Song",
-		lesson: "Lesson 1",
-		artist: "RPA",
-		url: "https://raw.githubusercontent.com/razvysme/CI-Training-WebApp/main/src/lib/audio/03.mp3",
+		name: "Forårsdag",
+		lesson: "Lektion 1",
+		artist: "Anne Linnet",
+		url: "https://raw.githubusercontent.com/razvysme/CI-Training-WebApp/main/src/lib/audio/2-1.mp3",
 		cover: "https://raw.githubusercontent.com/razvysme/CI-Training-WebApp/main/src/lib/img/2.png"
 	},
 	{
-		id: 1,
-		name: "Second Song",
-		lesson: "Lesson 2",
-		artist: "RPA",
-		url: "/src/lib/audio/03.mp3",
-		cover: "/src/lib/img/2.png"
+		name: "Forårsdag",
+		lesson: "Lektion 2",
+		artist: "Anne Linnet",
+		url: "https://raw.githubusercontent.com/razvysme/CI-Training-WebApp/main/src/lib/audio/2-2.mp3",
+		cover: "https://raw.githubusercontent.com/razvysme/CI-Training-WebApp/main/src/lib/img/2.png"
 	},
 	{
-		id: 1,
-		name: "Second Song",
-		lesson: "Lesson 3",
-		artist: "RPA",
-		url: "/src/lib/audio/TwoOne.wav",
-		cover: "/src/lib/img/2.png"
+		name: "Forårsdag",
+		lesson: "Lektion 3",
+		artist: "Anne Linnet",
+		url: "https://raw.githubusercontent.com/razvysme/CI-Training-WebApp/main/src/lib/audio/2-3.mp3",
+		cover: "https://raw.githubusercontent.com/razvysme/CI-Training-WebApp/main/src/lib/img/2.png"
 	},
 	{
-		id: 1,
-		name: "Second Song",
-		lesson: "Lesson 4",
-		artist: "RPA",
-		url: "/src/lib/audio/TwoOne.wav",
-		cover: "/src/lib/img/2.png"
+		name: "Forårsdag",
+		lesson: "Lektion 4",
+		artist: "Anne Linnet",
+		url: "https://raw.githubusercontent.com/razvysme/CI-Training-WebApp/main/src/lib/audio/2-4.mp3",
+		cover: "https://raw.githubusercontent.com/razvysme/CI-Training-WebApp/main/src/lib/img/2.png"
 	},
 	{
-		id: 1,
-		name: "Second Song",
-		lesson: "Lesson 5",
-		artist: "RPA",
-		url: "/src/lib/audio/TwoOne.wav",
-		cover: "/src/lib/img/2.png"
-	},
-	{
-		id: 1,
-		name: "Third Song",
-		lesson: "Lesson 1",
-		artist: "RPA",
-		url: "https://raw.githubusercontent.com/razvysme/CI-Training-WebApp/main/src/lib/audio/ThreeOne.wav",
+		name: "Papirsklip",
+		lesson: "Lektion 1",
+		artist: "Kim Larsen",
+		url: "https://raw.githubusercontent.com/razvysme/CI-Training-WebApp/main/src/lib/audio/3-1.mp3",
 		cover: "https://raw.githubusercontent.com/razvysme/CI-Training-WebApp/main/src/lib/img/3.png"
 	},
 	{
-		id: 1,
-		name: "Third Song",
-		lesson: "Lesson 2",
-		artist: "RPA",
-		url: "/src/lib/audio/ThreeTwo.wav",
-		cover: "/src/lib/img/3.png"
+		name: "Papirsklip",
+		lesson: "Lektion 2",
+		artist: "Kim Larsen",
+		url: "https://raw.githubusercontent.com/razvysme/CI-Training-WebApp/main/src/lib/audio/3-2.mp3",
+		cover: "https://raw.githubusercontent.com/razvysme/CI-Training-WebApp/main/src/lib/img/3.png"
 	},
 	{
-		id: 1,
-		name: "Third Song",
-		lesson: "Lesson 1",
-		artist: "RPA",
-		url: "/src/lib/audio/ThreeOne.wav",
-		cover: "/src/lib/img/3.png"
+		name: "Papirsklip",
+		lesson: "Lektion 3",
+		artist: "Kim Larsen",
+		url: "https://raw.githubusercontent.com/razvysme/CI-Training-WebApp/main/src/lib/audio/3-3.mp3",
+		cover: "https://raw.githubusercontent.com/razvysme/CI-Training-WebApp/main/src/lib/img/3.png"
 	},
 	{
-		id: 1,
-		name: "Third Song",
-		lesson: "Lesson 1",
-		artist: "RPA",
-		url: "/src/lib/audio/ThreeOne.wav",
-		cover: "/src/lib/img/3.png"
+		name: "Papirsklip",
+		lesson: "Lektion 4",
+		artist: "Kim Larsen",
+		url: "https://raw.githubusercontent.com/razvysme/CI-Training-WebApp/main/src/lib/audio/3-4.mp3",
+		cover: "https://raw.githubusercontent.com/razvysme/CI-Training-WebApp/main/src/lib/img/3.png"
 	},
 	{
-		id: 1,
-		name: "Third Song",
-		lesson: "Lesson 1",
+		name: "",
+		lesson: "Vi arbejder på det",
 		artist: "RPA",
-		url: "/src/lib/audio/ThreeOne.wav",
-		cover: "/src/lib/img3.png"
-	},
-	{
-		id: 1,
-		name: "Fourth Song",
-		lesson: "Lesson 1",
-		artist: "RPA",
-		url: "https://raw.githubusercontent.com/razvysme/CI-Training-WebApp/main/src/lib/audio/FourOne.wav",
+		url: "https://raw.githubusercontent.com/razvysme/CI-Training-WebApp/main/src/lib/audio/chimes.mp3",
 		cover: "https://raw.githubusercontent.com/razvysme/CI-Training-WebApp/main/src/lib/img/4.png"
 	},
 	{
-		id: 1,
-		name: "Fourth Song",
-		lesson: "Lesson 2",
-		artist: "RPA",
-		url: "/src/lib/audio/FourTwo.wav",
-		cover: "/src/lib/img/4.png"
+		name: "Vi arbejder på det",
+		lesson: "Lektion 2",
+		artist: "Jesper & Razvan",
+		url: "https://raw.githubusercontent.com/razvysme/CI-Training-WebApp/main/src/lib/audio/chimes.mp3",
+		cover: "https://raw.githubusercontent.com/razvysme/CI-Training-WebApp/main/src/lib/img/4.png"
 	},
 	{
-		id: 1,
-		name: "Fourth Song",
-		lesson: "Lesson 1",
-		artist: "RPA",
-		url: "/src/lib/audio/FourOne.wav",
-		cover: "/src/lib/img/4.png"
+		name: "Vi arbejder på det",
+		lesson: "Lektion 3",
+		artist: "Jesper & Razvan",
+		url: "https://raw.githubusercontent.com/razvysme/CI-Training-WebApp/main/src/lib/audio/chimes.mp3",
+		cover: "https://raw.githubusercontent.com/razvysme/CI-Training-WebApp/main/src/lib/img/4.png"
 	},
 	{
-		id: 1,
-		name: "Fourth Song",
-		lesson: "Lesson 1",
-		artist: "RPA",
-		url: "/src/lib/audio/FourOne.wav",
-		cover: "/src/lib/img/4.png"
+		name: "Vi arbejder på det",
+		lesson: "Lektion 4",
+		artist: "Jesper & Razvan",
+		url: "https://raw.githubusercontent.com/razvysme/CI-Training-WebApp/main/src/lib/audio/chimes.mp3",
+		cover: "https://raw.githubusercontent.com/razvysme/CI-Training-WebApp/main/src/lib/img/4.png"
 	},
-	{
-		id: 1,
-		name: "Fourth Song",
-		lesson: "Lesson 1",
-		artist: "RPA",
-		url: "/src/lib/audio/FourOne.wav",
-		cover: "/src/lib/img/4.png"
-	},
-
 ]
