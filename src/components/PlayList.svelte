@@ -4,7 +4,7 @@
 	let listIsShowing = false;
 
 	export let song = 0;
-	let truncAudioData = audioData.slice(song, song + 5);
+	let truncAudioData = audioData.slice(song, song + 4);
 	//console.log(truncAudioData);
 	
 	const showPlayList = () => listIsShowing = !listIsShowing;
@@ -71,6 +71,6 @@
 	}
 	
 	.show-list {
-		height: 180px;
+		height: 140px;
 	}
 </style>

@@ -85,31 +85,31 @@ export const audioData = [
 		cover: "https://raw.githubusercontent.com/razvysme/CI-Training-WebApp/main/src/lib/img/3.png"
 	},
 	{
-		name: "",
-		lesson: "Vi arbejder på det",
+		name: "Vi arbejder på det",
+		lesson: "Lektion 1",
 		artist: "RPA",
-		url: "https://raw.githubusercontent.com/razvysme/CI-Training-WebApp/main/src/lib/audio/chimes.mp3",
+		url: "https://raw.githubusercontent.com/razvysme/CI-Training-WebApp/main/src/lib/audio/Chimes.mp3",
 		cover: "https://raw.githubusercontent.com/razvysme/CI-Training-WebApp/main/src/lib/img/4.png"
 	},
 	{
 		name: "Vi arbejder på det",
 		lesson: "Lektion 2",
 		artist: "Jesper & Razvan",
-		url: "https://raw.githubusercontent.com/razvysme/CI-Training-WebApp/main/src/lib/audio/chimes.mp3",
+		url: "https://raw.githubusercontent.com/razvysme/CI-Training-WebApp/main/src/lib/audio/Chimes.mp3",
 		cover: "https://raw.githubusercontent.com/razvysme/CI-Training-WebApp/main/src/lib/img/4.png"
 	},
 	{
 		name: "Vi arbejder på det",
 		lesson: "Lektion 3",
 		artist: "Jesper & Razvan",
-		url: "https://raw.githubusercontent.com/razvysme/CI-Training-WebApp/main/src/lib/audio/chimes.mp3",
+		url: "https://raw.githubusercontent.com/razvysme/CI-Training-WebApp/main/src/lib/audio/Chimes.mp3",
 		cover: "https://raw.githubusercontent.com/razvysme/CI-Training-WebApp/main/src/lib/img/4.png"
 	},
 	{
 		name: "Vi arbejder på det",
 		lesson: "Lektion 4",
 		artist: "Jesper & Razvan",
-		url: "https://raw.githubusercontent.com/razvysme/CI-Training-WebApp/main/src/lib/audio/chimes.mp3",
+		url: "https://raw.githubusercontent.com/razvysme/CI-Training-WebApp/main/src/lib/audio/Chimes.mp3",
 		cover: "https://raw.githubusercontent.com/razvysme/CI-Training-WebApp/main/src/lib/img/4.png"
 	},
 ]

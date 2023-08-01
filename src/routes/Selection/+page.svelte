@@ -2,7 +2,7 @@
     import SongCover from "../../components/SongCover.svelte";
     import { listenMatrix } from "../../stores/trackIndexStore.js";
     import { browser } from '$app/environment';
-    let trackIndices = [0, 5, 10, 15];
+    let trackIndices = [0, 4, 8, 12];
 
     if (browser) {
       try {

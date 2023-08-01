@@ -7,7 +7,7 @@
 
     currentTrack.subscribe(value => {
         trackIndex = value;
-        console.log("Music Page Loaded - " + trackIndex);
+        //console.log("Music Page Loaded - " + trackIndex);
     });
     
 </script>
