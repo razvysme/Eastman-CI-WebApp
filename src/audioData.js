@@ -87,7 +87,7 @@ export const audioData = [
 	{
 		name: "Vi arbejder på det",
 		lesson: "Lektion 1",
-		artist: "RPA",
+		artist: "Jesper & Razvan",
 		url: "https://raw.githubusercontent.com/razvysme/CI-Training-WebApp/main/src/lib/audio/Chimes.mp3",
 		cover: "https://raw.githubusercontent.com/razvysme/CI-Training-WebApp/main/src/lib/img/4.png"
 	},

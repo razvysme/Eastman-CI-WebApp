@@ -12,7 +12,7 @@
         if (browser) {
             document.cookie = `usr=${usr};max-age=31536000;path="/"`;
             };
-        goto('/Selection');
+        goto('/AudioTest');
     }
 </script>
 
