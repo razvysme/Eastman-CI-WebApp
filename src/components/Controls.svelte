@@ -35,7 +35,7 @@
 	}
 	
 	button {
-		width: 37px;
+		width: 67px;
 		border: none;
 		font-size: 2.3rem;
 		padding: 0;

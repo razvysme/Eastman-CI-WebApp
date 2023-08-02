@@ -178,7 +178,7 @@
 				const totalDuration = audioFile.duration;
 				
 			// Check if audio has played over 75% of its length
-				if ((currentTime / totalDuration) > 0.02) {
+				if ((currentTime / totalDuration) > 0.75) {
 					console.log("Audio has passed 75% of its length!" + trackNr + " " + lessonIndex);
 					listenMatrix[trackNr][lessonIndex] = 1;
 					const listenMatrixString = JSON.stringify(listenMatrix);
@@ -204,7 +204,9 @@
 
 <main>
 	<section id="player-cont">
-		<img src={coverArt} alt="Cover Art">
+		<div style="display: flex; justify-content: center; align-items: center;">
+		<img src={coverArt} alt="Cover Art" style="width: 75%; height: 75%;">
+	  </div>
 
 		<TrackHeading artist={trackArtist} trackTitle={trackTitle} />
 

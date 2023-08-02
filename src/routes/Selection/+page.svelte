@@ -14,12 +14,12 @@
             const restoredListenMatrix = JSON.parse(decodedCookieValue);
             console.log("Restored listen matrix is: "+ restoredListenMatrix);
             for (let i = 0; i < 4; i++){
-              for (let j = 0; j < 5; j++){
+              for (let j = 0; j < 4; j++){
                 listenMatrix[i][j] = restoredListenMatrix[i][j];
               }}
         } else {
           for (let i = 0; i < 4; i++){
-            for (let j = 0; j < 5; j++){
+            for (let j = 0; j < 4; j++){
               listenMatrix[i][j] = 0;
           }}
           throw new Error('No listenMatrix cookie found. Defaulting to ' + listenMatrix);
