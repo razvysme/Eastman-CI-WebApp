@@ -4,6 +4,7 @@ import { browser } from '$app/environment';
 
 let usr;
 let id;
+let newID;
 
 if(browser) {
     function getCookie(name) {
@@ -25,18 +26,22 @@ export const logVisit = async (Animal=usr) => {
 }
 
 export const logSession = async (Track, Lesson, S_Length = 0) => {
-    //console.log("Session Started");
-    let Animal = getCookie('usr');
+    console.log("Session Started");
+    let Animal = usr;
     const{data, error} = await supabase.from("TrainingLog").insert([{Animal, Track, Lesson, S_Length}]).select();
     id = data[0].id;
+    console.log("id is " + id);
+    newID = id;
+    console.log("newID is " + newID);
     if(error) {
         console.log("erroring");
         return console.error(error);
     }
+    //return id;
 }
 
-export const logUpdateSession = async (S_Length) => {
-   //console.log("Updating Session");
+export const logUpdateSession = async (S_Length, id = newID) => {
+   console.log("Updating Session with: " + S_Length + " and id: " + id);
     const{data, error} = await supabase.from("TrainingLog").update({S_Length}).match({id});
     if(error) {
         console.log("erroring in update");
@@ -48,7 +53,7 @@ export const logCompleted = async (Completed = true) => {
     //console.log("Lection Completed");
     const{data, error} = await supabase.from("TrainingLog").update({Completed}).match({id});
     if(error) {
-        console.log("erroring in update");
+        console.log("erroring in Completed");
         return console.error(error);
     }
 }
