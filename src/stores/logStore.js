@@ -17,34 +17,34 @@ if(browser) {
 }
   
 export const logVisit = async (Animal=usr) => {
-    console.log("Visited");
+    //console.log("Visited");
     const{data, error} = await supabase.from("TrainingLog").insert([{Animal}]);
     if(error) {
-        console.log("erroring");
+        //console.log("erroring");
         return console.error(error);
     }
 }
 
 export const logSession = async (Track, Lesson, S_Length = 0) => {
-    console.log("Session Started");
+    //console.log("Session Started");
     let Animal = usr;
     const{data, error} = await supabase.from("TrainingLog").insert([{Animal, Track, Lesson, S_Length}]).select();
     id = data[0].id;
-    console.log("id is " + id);
+    //console.log("id is " + id);
     newID = id;
-    console.log("newID is " + newID);
+    //console.log("newID is " + newID);
     if(error) {
-        console.log("erroring");
+        //console.log("erroring");
         return console.error(error);
     }
     //return id;
 }
 
 export const logUpdateSession = async (S_Length, id = newID) => {
-   console.log("Updating Session with: " + S_Length + " and id: " + id);
+   //console.log("Updating Session with: " + S_Length + " and id: " + id);
     const{data, error} = await supabase.from("TrainingLog").update({S_Length}).match({id});
     if(error) {
-        console.log("erroring in update");
+        //console.log("erroring in update");
         return console.error(error);
     }
 }
@@ -53,7 +53,7 @@ export const logCompleted = async (Completed = true) => {
     //console.log("Lection Completed");
     const{data, error} = await supabase.from("TrainingLog").update({Completed}).match({id});
     if(error) {
-        console.log("erroring in Completed");
+        //console.log("erroring in Completed");
         return console.error(error);
     }
 }

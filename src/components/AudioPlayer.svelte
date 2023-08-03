@@ -176,7 +176,9 @@
 			if (!audioFile.paused) {
 				const currentTime = audioFile.currentTime;
 				const totalDuration = audioFile.duration;
-				logUpdateSession(currentTime);
+				if (logged){
+					logUpdateSession(currentTime);
+				}
 
 				if(!logged){
 					logSession(trackNr, lessonIndex, 0);
