@@ -2,7 +2,7 @@
 <script>
   import '../tailwind.css'
   import '../app.css'
-  //import {supabase} from '../supabase.js';
+  import {supabase} from '../supabase.js';
   import { setContext } from 'svelte';
   import { browser } from '$app/environment';
   //console.log(supabase);

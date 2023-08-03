@@ -2,7 +2,9 @@
     let usr = '';
     import { goto } from '$app/navigation';
     import { onMount } from 'svelte';
-    import { browser } from '$app/environment'; 
+    import { browser } from '$app/environment';
+    import {logVisit} from "../stores/logStore.js";
+
     const animal = "Torsk2";
     let audioFile;
 
@@ -28,6 +30,8 @@
         //usr='';
         goto('/Selection');
     };
+
+    
 </script>
 
 <style>
@@ -71,7 +75,8 @@
         <button
           type="continue"
           class="my-11 flex-1 shadow-sm rounded bg-sky-500 hover:bg-sky-600 text-lg text-white py-2 px-4"
-        >
+          on:click={logVisit()}
+          >
           Fortsæt
         </button>
       </div>

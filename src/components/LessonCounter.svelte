@@ -6,7 +6,6 @@
     let incompletedColor = '#C4C4C4'
 
     export let trackIndex = 1;
-    console.log(trackIndex);
     let rowData = listenMatrix[trackIndex];
 
     function getColor(value) {

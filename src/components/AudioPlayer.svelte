@@ -4,13 +4,12 @@
 	import TrackHeading from './TrackHeading.svelte';
 	import ProgressBarTime from './ProgressBarTime.svelte';
 	import Controls from './Controls.svelte';
-	//import VolumeSlider from './VolumeSlider.svelte';
 	import PlayList from './PlayList.svelte';
-	//import { Router, Route } from 'svelte-routing';
-	//import SelectionPage from '../routes/Selection/+page.svelte';
-	//import Layout from '../routes/+layout.svelte';
 	import {listenMatrix} from './../stores/trackIndexStore.js';
 	import { browser } from '$app/environment';
+	import { logSession } from '../stores/logStore.js';
+	import { logUpdateSession } from '../stores/logStore.js';
+	import { logCompleted } from '../stores/logStore.js';
 
 	
 	// Get Audio track
@@ -168,25 +167,31 @@
 
 	let trackNr = getTrackNumber(trackIndex);
 	let checkProgressInterval;
+	let logged = false;
 	async function checkAudioProgress() {
-	clearInterval(checkProgressInterval); // Clear any existing intervals
+		clearInterval(checkProgressInterval); // Clear any existing intervals
 	
 		checkProgressInterval = setInterval(async () => {
 			// Check if audioFile is playing
 			if (!audioFile.paused) {
 				const currentTime = audioFile.currentTime;
 				const totalDuration = audioFile.duration;
+				logUpdateSession(currentTime);
+
+				if(!logged){
+					logSession(trackNr, lessonIndex, 0);
+					logged = true;
+				}
 				
 			// Check if audio has played over 75% of its length
 				if ((currentTime / totalDuration) > 0.75) {
 					console.log("Audio has passed 75% of its length!" + trackNr + " " + lessonIndex);
 					listenMatrix[trackNr][lessonIndex] = 1;
 					const listenMatrixString = JSON.stringify(listenMatrix);
+					logCompleted(true);
 					if (browser) {
 						document.cookie = `listenMatrix=${encodeURIComponent(listenMatrixString)}; max-age=31536000;path="/"`;
 					};
-
-					
 					clearInterval(checkProgressInterval); // Stop checking progress until a sound starts again
 				}
 			}
