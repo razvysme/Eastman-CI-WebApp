@@ -192,7 +192,7 @@
 					const listenMatrixString = JSON.stringify(listenMatrix);
 					logCompleted(true);
 					if (browser) {
-						document.cookie = `listenMatrix=${encodeURIComponent(listenMatrixString)}; max-age=31536000;path="/"`;
+						document.cookie = `listenLog=${encodeURIComponent(listenMatrixString)}; max-age=31536000;path="/"`;
 					};
 					clearInterval(checkProgressInterval); // Stop checking progress until a sound starts again
 				}

@@ -6,7 +6,7 @@
 
     if (browser) {
       try {
-        const listenMatrixCookie = document.cookie.split('; ').find(row => row.startsWith('listenMatrix='));
+        const listenMatrixCookie = document.cookie.split('; ').find(row => row.startsWith('listenLog='));
 
         if (listenMatrixCookie) {
             const listenMatrixEncoded = listenMatrixCookie.split('=')[1]
