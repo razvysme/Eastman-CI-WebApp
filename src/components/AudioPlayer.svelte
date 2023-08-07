@@ -1,5 +1,5 @@
 <script>
-	import { audioData } from '../audioData.js';
+	import { audioData, audioData_Normal } from '../audioData.js';
 	import { goto } from '$app/navigation';
 	import TrackHeading from './TrackHeading.svelte';
 	import ProgressBarTime from './ProgressBarTime.svelte';
@@ -10,38 +10,53 @@
 	import { logSession } from '../stores/logStore.js';
 	import { logUpdateSession } from '../stores/logStore.js';
 	import { logCompleted } from '../stores/logStore.js';
+	import {tactileUsers } from "../stores/userList.js"
 
-	
 	// Get Audio track
 	export let  trackIndex = 1;
-	// $: console.log(trackIndex)
 	let audioFile;
 	let trackTitle;
 	let trackArtist;
 	let coverArt;
+	let audioDB;
 
-	if (browser){
-		audioFile = new Audio(audioData[trackIndex].url);
-		trackTitle = audioData[trackIndex].name;
-		trackArtist = audioData[trackIndex].artist;
-		coverArt = audioData[trackIndex].cover;
+	if(browser) {
+    function getCookie(name) {
+        const value = `; ${document.cookie}`;
+        const parts = value.split(`; ${name}=`);
+        if (parts.length === 2) return parts.pop().split(';').shift();
+    }
+    let usr = getCookie('usr');
+	
+	if (tactileUsers.includes(usr)) {
+		audioDB = audioData;
+		console.log("Playin song for the tactile group");
+	} else {
+		audioDB = audioData_Normal;
+		console.log("Playing for the normal group");
 	}
+	audioFile = new Audio(audioDB[trackIndex].url);
+	trackTitle = audioDB[trackIndex].name;
+	trackArtist = audioDB[trackIndex].artist;
+	coverArt = audioDB[trackIndex].cover;
+	}
+
 
 	const loadTrack = () => {
 		console.log(trackIndex);
 		
 		if (browser) {
-			audioFile = new Audio(audioData[trackIndex].url);
+			audioFile = new Audio(audioDB[trackIndex].url);
 			audioFile.onloadedmetadata = () => {
 				totalTrackTime = audioFile.duration;
 				updateTime();
 			}	
 		}
-		trackTitle = audioData[trackIndex].name;
+		trackTitle = audioDB[trackIndex].name;
 	}
 	
 	const autoPlayNextTrack = () => {
-		if (trackIndex <= audioData.length-1) {
+		if (trackIndex <= audioDB.length-1) {
 			trackIndex += 1;
 			loadTrack();
 			audioFile.play();

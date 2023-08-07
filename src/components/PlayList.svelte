@@ -1,10 +1,31 @@
 <script>
-	import { audioData } from '../audioData.js';
-	
+	import { audioData, audioData_Normal } from '../audioData.js';
+	import {tactileUsers } from "../stores/userList.js"
+	import { browser } from '$app/environment';
 	let listIsShowing = false;
+	let usr;
+
+	if(browser) {
+    function getCookie(name) {
+        const value = `; ${document.cookie}`;
+        const parts = value.split(`; ${name}=`);
+        if (parts.length === 2) return parts.pop().split(';').shift();
+    }
+    usr = getCookie('usr');
+    //console.log(usr);
+}
 
 	export let song = 0;
-	let truncAudioData = audioData.slice(song, song + 4);
+
+	let truncAudioData;
+	if (tactileUsers.includes(usr)) {
+  		truncAudioData = audioData.slice(song, song + 4);
+		console.log("Playlist loaded for the tactile group");
+	} else {
+  		truncAudioData = audioData_Normal.slice(song, song + 4);
+		console.log("Normal playlist loade");
+	}
+	// = audioData.slice(song, song + 4);
 	//console.log(truncAudioData);
 	
 	const showPlayList = () => listIsShowing = !listIsShowing;
