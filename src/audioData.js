@@ -203,28 +203,28 @@ export const audioData_Normal = [
 		name: "What a wonderful world",
 		lesson: "Lektion 1",
 		artist: "Louis Armstrong",
-		url: "https://paisa.dk/TrainingAudio/4-1.mp3",
+		url: "https://paisa.dk/TrainingAudio/Normal/4-1.mp3",
 		cover: "https://raw.githubusercontent.com/razvysme/CI-Training-WebApp/main/src/lib/img/4.png"
 	},
 	{
 		name: "What a wonderful world",
 		lesson: "Lektion 2",
 		artist: "Louis Armstrong",
-		url: "https://paisa.dk/TrainingAudio/4-2.mp3",
+		url: "https://paisa.dk/TrainingAudio/Normal/4-2.mp3",
 		cover: "https://raw.githubusercontent.com/razvysme/CI-Training-WebApp/main/src/lib/img/4.png"
 	},
 	{
 		name: "What a wonderful world",
 		lesson: "Lektion 3",
 		artist: "Louis Armstrong",
-		url: "https://paisa.dk/TrainingAudio/4-3.mp3",
+		url: "https://paisa.dk/TrainingAudio/Normal/4-3.mp3",
 		cover: "https://raw.githubusercontent.com/razvysme/CI-Training-WebApp/main/src/lib/img/4.png"
 	},
 	{
 		name: "What a wonderful world",
 		lesson: "Lektion 4",
 		artist: "Louis Armstrong",
-		url: "https://paisa.dk/TrainingAudio/4-4.mp3",
+		url: "https://paisa.dk/TrainingAudio/Normal/4-4.mp3",
 		cover: "https://raw.githubusercontent.com/razvysme/CI-Training-WebApp/main/src/lib/img/4.png"
 	},
 ]
