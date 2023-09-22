@@ -200,31 +200,31 @@ export const audioData_Normal = [
 		cover: "https://raw.githubusercontent.com/razvysme/CI-Training-WebApp/main/src/lib/img/3.png"
 	},
 	{
-		name: "Vi arbejder på det",
+		name: "What a wonderful world",
 		lesson: "Lektion 1",
-		artist: "Teamet",
-		url: "https://raw.githubusercontent.com/razvysme/CI-Training-WebApp/main/src/lib/audio/Normal/Chimes.mp3",
+		artist: "Louis Armstrong",
+		url: "https://raw.githubusercontent.com/razvysme/CI-Training-WebApp/main/src/lib/audio/Normal/4-1.mp3",
 		cover: "https://raw.githubusercontent.com/razvysme/CI-Training-WebApp/main/src/lib/img/4.png"
 	},
 	{
-		name: "Vi arbejder på det",
+		name: "What a wonderful world",
 		lesson: "Lektion 2",
-		artist: "Teamet",
-		url: "https://raw.githubusercontent.com/razvysme/CI-Training-WebApp/main/src/lib/audio/Normal/Chimes.mp3",
+		artist: "Louis Armstrong",
+		url: "https://raw.githubusercontent.com/razvysme/CI-Training-WebApp/main/src/lib/audio/Normal/4-2.mp3",
 		cover: "https://raw.githubusercontent.com/razvysme/CI-Training-WebApp/main/src/lib/img/4.png"
 	},
 	{
-		name: "Vi arbejder på det",
+		name: "What a wonderful world",
 		lesson: "Lektion 3",
-		artist: "Teamet",
-		url: "https://raw.githubusercontent.com/razvysme/CI-Training-WebApp/main/src/lib/audio/Normal/Chimes.mp3",
+		artist: "Louis Armstrong",
+		url: "https://raw.githubusercontent.com/razvysme/CI-Training-WebApp/main/src/lib/audio/Normal/4-3.mp3",
 		cover: "https://raw.githubusercontent.com/razvysme/CI-Training-WebApp/main/src/lib/img/4.png"
 	},
 	{
-		name: "Vi arbejder på det",
+		name: "What a wonderful world",
 		lesson: "Lektion 4",
-		artist: "Teamet",
-		url: "https://raw.githubusercontent.com/razvysme/CI-Training-WebApp/main/src/lib/audio/Normal/Chimes.mp3",
+		artist: "Louis Armstrong",
+		url: "https://raw.githubusercontent.com/razvysme/CI-Training-WebApp/main/src/lib/audio/Normal/4-4.mp3",
 		cover: "https://raw.githubusercontent.com/razvysme/CI-Training-WebApp/main/src/lib/img/4.png"
 	},
 ]
