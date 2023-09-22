@@ -85,31 +85,31 @@ export const audioData = [
 		cover: "https://raw.githubusercontent.com/razvysme/CI-Training-WebApp/main/src/lib/img/3.png"
 	},
 	{
-		name: "Vi arbejder på det",
+		name: "What a wonderful World",
 		lesson: "Lektion 1",
-		artist: "Teamet",
-		url: "https://raw.githubusercontent.com/razvysme/CI-Training-WebApp/main/src/lib/audio/Chimes.mp3",
+		artist: "Louis Armstrong",
+		url: "https://paisa.dk/TrainingAudio/4-1.mp3",
 		cover: "https://raw.githubusercontent.com/razvysme/CI-Training-WebApp/main/src/lib/img/4.png"
 	},
 	{
-		name: "Vi arbejder på det",
+		name: "What a wonderful World",
 		lesson: "Lektion 2",
-		artist: "Teamet",
-		url: "https://raw.githubusercontent.com/razvysme/CI-Training-WebApp/main/src/lib/audio/Chimes.mp3",
+		artist: "Louis Armstrong",
+		url: "https://paisa.dk/TrainingAudio/4-2.mp3",
 		cover: "https://raw.githubusercontent.com/razvysme/CI-Training-WebApp/main/src/lib/img/4.png"
 	},
 	{
-		name: "Vi arbejder på det",
+		name: "What a wonderful World",
 		lesson: "Lektion 3",
-		artist: "Teamet",
-		url: "https://raw.githubusercontent.com/razvysme/CI-Training-WebApp/main/src/lib/audio/Chimes.mp3",
+		artist: "Louis Armstrong",
+		url: "https://paisa.dk/TrainingAudio/4-3.mp3",
 		cover: "https://raw.githubusercontent.com/razvysme/CI-Training-WebApp/main/src/lib/img/4.png"
 	},
 	{
-		name: "Vi arbejder på det",
+		name: "What a wonderful World",
 		lesson: "Lektion 4",
-		artist: "Teamet",
-		url: "https://raw.githubusercontent.com/razvysme/CI-Training-WebApp/main/src/lib/audio/Chimes.mp3",
+		artist: "Louis Armstrong",
+		url: "https://paisa.dk/TrainingAudio/4-4.mp3",
 		cover: "https://raw.githubusercontent.com/razvysme/CI-Training-WebApp/main/src/lib/img/4.png"
 	},
 ]
@@ -203,28 +203,28 @@ export const audioData_Normal = [
 		name: "What a wonderful world",
 		lesson: "Lektion 1",
 		artist: "Louis Armstrong",
-		url: "https://raw.githubusercontent.com/razvysme/CI-Training-WebApp/main/src/lib/audio/Normal/4-1.mp3",
+		url: "https://paisa.dk/TrainingAudio/4-1.mp3",
 		cover: "https://raw.githubusercontent.com/razvysme/CI-Training-WebApp/main/src/lib/img/4.png"
 	},
 	{
 		name: "What a wonderful world",
 		lesson: "Lektion 2",
 		artist: "Louis Armstrong",
-		url: "https://raw.githubusercontent.com/razvysme/CI-Training-WebApp/main/src/lib/audio/Normal/4-2.mp3",
+		url: "https://paisa.dk/TrainingAudio/4-2.mp3",
 		cover: "https://raw.githubusercontent.com/razvysme/CI-Training-WebApp/main/src/lib/img/4.png"
 	},
 	{
 		name: "What a wonderful world",
 		lesson: "Lektion 3",
 		artist: "Louis Armstrong",
-		url: "https://raw.githubusercontent.com/razvysme/CI-Training-WebApp/main/src/lib/audio/Normal/4-3.mp3",
+		url: "https://paisa.dk/TrainingAudio/4-3.mp3",
 		cover: "https://raw.githubusercontent.com/razvysme/CI-Training-WebApp/main/src/lib/img/4.png"
 	},
 	{
 		name: "What a wonderful world",
 		lesson: "Lektion 4",
 		artist: "Louis Armstrong",
-		url: "https://raw.githubusercontent.com/razvysme/CI-Training-WebApp/main/src/lib/audio/Normal/4-4.mp3",
+		url: "https://paisa.dk/TrainingAudio/4-4.mp3",
 		cover: "https://raw.githubusercontent.com/razvysme/CI-Training-WebApp/main/src/lib/img/4.png"
 	},
 ]
