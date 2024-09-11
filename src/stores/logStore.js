@@ -18,7 +18,7 @@ if(browser) {
   
 export const logVisit = async (Animal=usr) => {
     //console.log("Visited");
-    const{data, error} = await supabase.from("TrainingLog").insert([{Animal}]);
+    const{data, error} = await supabase.from("EastmanLog").insert([{Animal}]);
     if(error) {
         //console.log("erroring");
         return console.error(error);
@@ -28,7 +28,7 @@ export const logVisit = async (Animal=usr) => {
 export const logSession = async (Track, Lesson, S_Length = 0) => {
     //console.log("Session Started");
     let Animal = usr;
-    const{data, error} = await supabase.from("TrainingLog").insert([{Animal, Track, Lesson, S_Length}]).select();
+    const{data, error} = await supabase.from("EastmanLog").insert([{Animal, Track, Lesson, S_Length}]).select();
     id = data[0].id;
     //console.log("id is " + id);
     newID = id;
@@ -42,7 +42,7 @@ export const logSession = async (Track, Lesson, S_Length = 0) => {
 
 export const logUpdateSession = async (S_Length, id = newID) => {
    //console.log("Updating Session with: " + S_Length + " and id: " + id);
-    const{data, error} = await supabase.from("TrainingLog").update({S_Length}).match({id});
+    const{data, error} = await supabase.from("EastmanLog").update({S_Length}).match({id});
     if(error) {
         //console.log("erroring in update");
         return console.error(error);
@@ -51,7 +51,7 @@ export const logUpdateSession = async (S_Length, id = newID) => {
 
 export const logCompleted = async (Completed = true) => {
     //console.log("Lection Completed");
-    const{data, error} = await supabase.from("TrainingLog").update({Completed}).match({id});
+    const{data, error} = await supabase.from("EastmanLog").update({Completed}).match({id});
     if(error) {
         //console.log("erroring in Completed");
         return console.error(error);

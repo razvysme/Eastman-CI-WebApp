@@ -25,7 +25,7 @@
         <section id="player-cont">
             <img src={coverArt} alt="Cover Art">
             <TrackHeading artist={trackArtist} trackTitle={trackTitle}/>
-            <h3 class="mb-0.5 text-orange-600 text-left">Lyttet</h3>
+            <h3 class="mb-0.5 text-orange-600 text-left">Listened</h3>
             <LessonCounter trackIndex={trackIndex / 4}/>
         </section>
     </main>
