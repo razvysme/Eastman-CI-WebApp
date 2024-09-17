@@ -1,230 +1,232 @@
+const hosting = "https://d3spngajmc7mtz.cloudfront.net/";
+
 export const audioData = [
 	{
 		name: "Imagine",
-		lesson: "Lektion 1",
-		artist: "John Lenon - 1",
-		url: "https://paisa.dk/TrainingAudio/1-1.mp3",
-		cover: "https://raw.githubusercontent.com/razvysme/CI-Training-WebApp/main/src/lib/img/1.png"
+        lesson: "Lesson 1",
+        artist: "John Lenon",
+        url:  `${hosting}English/LESSON%2001.mp3`,
+        cover: `${hosting}img/1.jpeg`,
 	},
 	{
 		name: "Imagine",
-		lesson: "Lektion 2",
-		artist: "John Lenon - 1",
-		url: "https://paisa.dk/TrainingAudio/1-2.mp3",
-		cover: "https://raw.githubusercontent.com/razvysme/CI-Training-WebApp/main/src/lib/img/1.png"
+        lesson: "Lesson 2",
+        artist: "John Lenon",
+        url:  `${hosting}English/LESSON%2002.mp3`,
+        cover: `${hosting}img/1.jpeg`,
 	},
 	{
 		name: "Imagine",
-		lesson: "Lektion 3",
-		artist: "John Lenon - 1",
-		url: "https://paisa.dk/TrainingAudio/1-3.mp3",
-		cover: "https://raw.githubusercontent.com/razvysme/CI-Training-WebApp/main/src/lib/img/1.png"
+        lesson: "Lesson 3",
+        artist: "John Lenon",
+        url:  `${hosting}English/LESSON%2003.mp3`,
+        cover: `${hosting}img/1.jpeg`,
 	},
 	{
 		name: "Imagine",
-		lesson: "Lektion 4",
-		artist: "John Lenon -1",
-		url: "https://paisa.dk/TrainingAudio/1-4.mp3",
-		cover: "https://raw.githubusercontent.com/razvysme/CI-Training-WebApp/main/src/lib/img/1.png"
+        lesson: "Lesson 4",
+        artist: "John Lenon",
+        url:  `${hosting}English/LESSON%2004.mp3`,
+        cover: `${hosting}img/1.jpeg`,
 	},
 	
 	{
-		name: "Forårsdag",
-		lesson: "Lektion 1",
-		artist: "Anne Linnet - 2",
-		url: "https://paisa.dk/TrainingAudio/2-1.mp3",
-		cover: "https://raw.githubusercontent.com/razvysme/CI-Training-WebApp/main/src/lib/img/2.png"
+		name: "What a wonderful world",
+        lesson: "Lesson 1",
+        artist: "Louis Armstrong",
+        url:  `${hosting}English/LESSON%2005.mp3`,
+        cover: `${hosting}img/4.jpg`,
 	},
 	{
-		name: "Forårsdag",
-		lesson: "Lektion 2",
-		artist: "Anne Linnet - 2",
-		url: "https://paisa.dk/TrainingAudio/2-2.mp3",
-		cover: "https://raw.githubusercontent.com/razvysme/CI-Training-WebApp/main/src/lib/img/2.png"
+		name: "What a wonderful world",
+        lesson: "Lesson 2",
+        artist: "Louis Armstrong",
+        url:  `${hosting}English/LESSON%2006.mp3`,
+        cover: `${hosting}img/4.jpg`,
 	},
 	{
-		name: "Forårsdag",
-		lesson: "Lektion 3",
-		artist: "Anne Linnet - 2",
-		url: "https://paisa.dk/TrainingAudio/2-3.mp3",
-		cover: "https://raw.githubusercontent.com/razvysme/CI-Training-WebApp/main/src/lib/img/2.png"
+		name: "What a wonderful world",
+        lesson: "Lesson 3",
+        artist: "Louis Armstrong",
+        url:  `${hosting}English/LESSON%2007.mp3`,
+        cover: `${hosting}img/4.jpg`,
 	},
 	{
-		name: "Forårsdag",
-		lesson: "Lektion 4",
-		artist: "Anne Linnet - 2",
-		url: "https://paisa.dk/TrainingAudio/2-4.mp3",
-		cover: "https://raw.githubusercontent.com/razvysme/CI-Training-WebApp/main/src/lib/img/2.png"
+		name: "What a wonderful world",
+        lesson: "Lesson 4",
+        artist: "Louis Armstrong",
+        url:  `${hosting}English/LESSON%2008.mp3`,
+        cover: `${hosting}img/4.jpg`,
 	},
 	{
-		name: "Papirsklip",
-		lesson: "Lektion 1",
-		artist: "Kim Larsen - 3",
-		url: "https://paisa.dk/TrainingAudio/3-1.mp3",
-		cover: "https://raw.githubusercontent.com/razvysme/CI-Training-WebApp/main/src/lib/img/3.png"
+		name: "Over the Rainbow",
+		lesson: "Lesson 1",
+		artist: "Judy Garland",
+        url:  `${hosting}English/LESSON%2009.mp3`,
+        cover: `${hosting}img/5.jpg`,
 	},
 	{
-		name: "Papirsklip",
-		lesson: "Lektion 2",
-		artist: "Kim Larsen - 3",
-		url: "https://paisa.dk/TrainingAudio/3-2.mp3",
-		cover: "https://raw.githubusercontent.com/razvysme/CI-Training-WebApp/main/src/lib/img/3.png"
+		name: "Over the Rainbow",
+		lesson: "Lesson 2",
+		artist: "Judy Garland",
+        url:  `${hosting}English/LESSON%2010.mp3`,
+        cover: `${hosting}img/5.jpg`,
 	},
 	{
-		name: "Papirsklip",
-		lesson: "Lektion 3",
-		artist: "Kim Larsen - 3",
-		url: "https://paisa.dk/TrainingAudio/3-3.mp3",
-		cover: "https://raw.githubusercontent.com/razvysme/CI-Training-WebApp/main/src/lib/img/3.png"
+		name: "Over the Rainbow",
+		lesson: "Lesson 3",
+		artist: "Judy Garland",
+        url:  `${hosting}English/LESSON%2011.mp3`,
+        cover: `${hosting}img/5.jpg`,
 	},
 	{
-		name: "Papirsklip",
-		lesson: "Lektion 4",
-		artist: "Kim Larsen - 3",
-		url: "https://paisa.dk/TrainingAudio/3-4.mp3",
-		cover: "https://raw.githubusercontent.com/razvysme/CI-Training-WebApp/main/src/lib/img/3.png"
+		name: "Over the Rainbow",
+		lesson: "Lesson 4",
+		artist: "Judy Garland",
+        url:  `${hosting}English/LESSON%2012.mp3`,
+        cover: `${hosting}img/5.jpg`,
 	},
 	{
-		name: "What a wonderful World",
-		lesson: "Lektion 1",
-		artist: "Louis Armstrong",
-		url: "https://paisa.dk/TrainingAudio/4-1.mp3",
-		cover: "https://raw.githubusercontent.com/razvysme/CI-Training-WebApp/main/src/lib/img/4.png"
+		name: "Stayin' Alive",
+		lesson: "Lesson 1",
+		artist: "Bee Gees",
+        url:  `${hosting}English/LESSON%2013.mp3`,
+        cover: `${hosting}img/6.jpg`,
 	},
 	{
-		name: "What a wonderful World",
-		lesson: "Lektion 2",
-		artist: "Louis Armstrong",
-		url: "https://paisa.dk/TrainingAudio/4-2.mp3",
-		cover: "https://raw.githubusercontent.com/razvysme/CI-Training-WebApp/main/src/lib/img/4.png"
+		name: "Stayin' Alive",
+		lesson: "Lesson 2",
+		artist: "Bee Gees",
+        url:  `${hosting}English/LESSON%2014.mp3`,
+        cover: `${hosting}img/6.jpg`,
 	},
 	{
-		name: "What a wonderful World",
-		lesson: "Lektion 3",
-		artist: "Louis Armstrong",
-		url: "https://paisa.dk/TrainingAudio/4-3.mp3",
-		cover: "https://raw.githubusercontent.com/razvysme/CI-Training-WebApp/main/src/lib/img/4.png"
+		name: "Stayin' Alive",
+		lesson: "Lesson 3",
+		artist: "Bee Gees",
+        url:  `${hosting}English/LESSON%2015.mp3`,
+        cover: `${hosting}img/6.jpg`,
 	},
 	{
-		name: "What a wonderful World",
-		lesson: "Lektion 4",
-		artist: "Louis Armstrong",
-		url: "https://paisa.dk/TrainingAudio/4-4.mp3",
-		cover: "https://raw.githubusercontent.com/razvysme/CI-Training-WebApp/main/src/lib/img/4.png"
+		name: "Stayin' Alive",
+		lesson: "Lesson 4",
+		artist: "Bee Gees",
+        url:  `${hosting}English/LESSON%2016.mp3`,
+        cover: `${hosting}img/6.jpg`,
 	},
 ]
 export const audioData_Normal = [
 	{
 		name: "Imagine",
-		lesson: "Lektion 1",
-		artist: "John Lenon - 1",
-		url: "https://paisa.dk/TrainingAudio/Normal/1-1.mp3",
-		cover: "https://raw.githubusercontent.com/razvysme/CI-Training-WebApp/main/src/lib/img/1.png"
+        lesson: "Lesson 1",
+        artist: "John Lenon",
+        url:  `${hosting}English/LESSON%2001.mp3`,
+        cover: `${hosting}img/1.jpeg`,
 	},
 	{
 		name: "Imagine",
-		lesson: "Lektion 2",
-		artist: "John Lenon - 1",
-		url: "https://paisa.dk/TrainingAudio/Normal/1-2.mp3",
-		cover: "https://raw.githubusercontent.com/razvysme/CI-Training-WebApp/main/src/lib/img/1.png"
+        lesson: "Lesson 2",
+        artist: "John Lenon",
+        url:  `${hosting}English/LESSON%2002.mp3`,
+        cover: `${hosting}img/1.jpeg`,
 	},
 	{
 		name: "Imagine",
-		lesson: "Lektion 3",
-		artist: "John Lenon - 1",
-		url: "https://paisa.dk/TrainingAudio/Normal/1-3.mp3",
-		cover: "https://raw.githubusercontent.com/razvysme/CI-Training-WebApp/main/src/lib/img/1.png"
+        lesson: "Lesson 3",
+        artist: "John Lenon",
+        url:  `${hosting}English/LESSON%2003.mp3`,
+        cover: `${hosting}img/1.jpeg`,
 	},
 	{
 		name: "Imagine",
-		lesson: "Lektion 4",
-		artist: "John Lenon -1",
-		url: "https://paisa.dk/TrainingAudio/Normal/1-4.mp3",
-		cover: "https://raw.githubusercontent.com/razvysme/CI-Training-WebApp/main/src/lib/img/1.png"
+        lesson: "Lesson 4",
+        artist: "John Lenon",
+        url:  `${hosting}English/LESSON%2004.mp3`,
+        cover: `${hosting}img/1.jpeg`,
 	},
 	
 	{
-		name: "Forårsdag",
-		lesson: "Lektion 1",
-		artist: "Anne Linnet - 2",
-		url: "https://paisa.dk/TrainingAudio/Normal/2-1.mp3",
-		cover: "https://raw.githubusercontent.com/razvysme/CI-Training-WebApp/main/src/lib/img/2.png"
-	},
-	{
-		name: "Forårsdag",
-		lesson: "Lektion 2",
-		artist: "Anne Linnet - 2",
-		url: "https://paisa.dk/TrainingAudio/Normal/2-2.mp3",
-		cover: "https://raw.githubusercontent.com/razvysme/CI-Training-WebApp/main/src/lib/img/2.png"
-	},
-	{
-		name: "Forårsdag",
-		lesson: "Lektion 3",
-		artist: "Anne Linnet - 2",
-		url: "https://paisa.dk/TrainingAudio/Normal/2-3.mp3",
-		cover: "https://raw.githubusercontent.com/razvysme/CI-Training-WebApp/main/src/lib/img/2.png"
-	},
-	{
-		name: "Forårsdag",
-		lesson: "Lektion 4",
-		artist: "Anne Linnet - 2",
-		url: "https://paisa.dk/TrainingAudio/Normal/2-4.mp3",
-		cover: "https://raw.githubusercontent.com/razvysme/CI-Training-WebApp/main/src/lib/img/2.png"
-	},
-	{
-		name: "Papirsklip",
-		lesson: "Lektion 1",
-		artist: "Kim Larsen - 3",
-		url: "https://paisa.dk/TrainingAudio/Normal/3-1.mp3",
-		cover: "https://raw.githubusercontent.com/razvysme/CI-Training-WebApp/main/src/lib/img/3.png"
-	},
-	{
-		name: "Papirsklip",
-		lesson: "Lektion 2",
-		artist: "Kim Larsen - 3",
-		url: "https://paisa.dk/TrainingAudio/Normal/3-2.mp3",
-		cover: "https://raw.githubusercontent.com/razvysme/CI-Training-WebApp/main/src/lib/img/3.png"
-	},
-	{
-		name: "Papirsklip",
-		lesson: "Lektion 3",
-		artist: "Kim Larsen - 3",
-		url: "https://paisa.dk/TrainingAudio/Normal/3-3.mp3",
-		cover: "https://raw.githubusercontent.com/razvysme/CI-Training-WebApp/main/src/lib/img/3.png"
-	},
-	{
-		name: "Papirsklip",
-		lesson: "Lektion 4",
-		artist: "Kim Larsen - 3",
-		url: "https://paisa.dk/TrainingAudio/Normal/3-4.mp3",
-		cover: "https://raw.githubusercontent.com/razvysme/CI-Training-WebApp/main/src/lib/img/3.png"
+		name: "What a wonderful world",
+        lesson: "Lesson 1",
+        artist: "Louis Armstrong",
+        url:  `${hosting}English/LESSON%2005.mp3`,
+        cover: `${hosting}img/4.jpg`,
 	},
 	{
 		name: "What a wonderful world",
-		lesson: "Lektion 1",
-		artist: "Louis Armstrong",
-		url: "https://paisa.dk/TrainingAudio/Normal/4-1.mp3",
-		cover: "https://raw.githubusercontent.com/razvysme/CI-Training-WebApp/main/src/lib/img/4.png"
+        lesson: "Lesson 2",
+        artist: "Louis Armstrong",
+        url:  `${hosting}English/LESSON%2006.mp3`,
+        cover: `${hosting}img/4.jpg`,
 	},
 	{
 		name: "What a wonderful world",
-		lesson: "Lektion 2",
-		artist: "Louis Armstrong",
-		url: "https://paisa.dk/TrainingAudio/Normal/4-2.mp3",
-		cover: "https://raw.githubusercontent.com/razvysme/CI-Training-WebApp/main/src/lib/img/4.png"
+        lesson: "Lesson 3",
+        artist: "Louis Armstrong",
+        url:  `${hosting}English/LESSON%2007.mp3`,
+        cover: `${hosting}img/4.jpg`,
 	},
 	{
 		name: "What a wonderful world",
-		lesson: "Lektion 3",
-		artist: "Louis Armstrong",
-		url: "https://paisa.dk/TrainingAudio/Normal/4-3.mp3",
-		cover: "https://raw.githubusercontent.com/razvysme/CI-Training-WebApp/main/src/lib/img/4.png"
+        lesson: "Lesson 4",
+        artist: "Louis Armstrong",
+        url:  `${hosting}English/LESSON%2008.mp3`,
+        cover: `${hosting}img/4.jpg`,
 	},
 	{
-		name: "What a wonderful world",
-		lesson: "Lektion 4",
-		artist: "Louis Armstrong",
-		url: "https://paisa.dk/TrainingAudio/Normal/4-4.mp3",
-		cover: "https://raw.githubusercontent.com/razvysme/CI-Training-WebApp/main/src/lib/img/4.png"
+		name: "Over the Rainbow",
+		lesson: "Lesson 1",
+		artist: "Judy Garland",
+        url:  `${hosting}English/LESSON%2009.mp3`,
+        cover: `${hosting}img/5.jpg`,
+	},
+	{
+		name: "Over the Rainbow",
+		lesson: "Lesson 2",
+		artist: "Judy Garland",
+        url:  `${hosting}English/LESSON%2010.mp3`,
+        cover: `${hosting}img/5.jpg`,
+	},
+	{
+		name: "Over the Rainbow",
+		lesson: "Lesson 3",
+		artist: "Judy Garland",
+        url:  `${hosting}English/LESSON%2011.mp3`,
+        cover: `${hosting}img/5.jpg`,
+	},
+	{
+		name: "Over the Rainbow",
+		lesson: "Lesson 4",
+		artist: "Judy Garland",
+        url:  `${hosting}English/LESSON%2012.mp3`,
+        cover: `${hosting}img/5.jpg`,
+	},
+	{
+		name: "Stayin' Alive",
+		lesson: "Lesson 1",
+		artist: "Bee Gees",
+        url:  `${hosting}English/LESSON%2013.mp3`,
+        cover: `${hosting}img/6.jpg`,
+	},
+	{
+		name: "Stayin' Alive",
+		lesson: "Lesson 2",
+		artist: "Bee Gees",
+        url:  `${hosting}English/LESSON%2014.mp3`,
+        cover: `${hosting}img/6.jpg`,
+	},
+	{
+		name: "Stayin' Alive",
+		lesson: "Lesson 3",
+		artist: "Bee Gees",
+        url:  `${hosting}English/LESSON%2015.mp3`,
+        cover: `${hosting}img/6.jpg`,
+	},
+	{
+		name: "Stayin' Alive",
+		lesson: "Lesson 4",
+		artist: "Bee Gees",
+        url:  `${hosting}English/LESSON%2016.mp3`,
+        cover: `${hosting}img/6.jpg`,
 	},
 ]

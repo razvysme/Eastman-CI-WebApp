@@ -48,7 +48,7 @@
         <h1 class="mb-2 text-gray-500 text-base text-left">If not, follow these steps to make the sound work:</h1>
         
         <div class="flex items-center mb-3">
-            <img class="w-24 h-24 rounded-full mr-2" src="https://raw.githubusercontent.com/razvysme/CI-Training-WebApp/main/src/lib/img/SpeakerIcon.png" alt="Speaker Image">
+            <img class="w-24 h-24 rounded-full mr-2" src="https://d3spngajmc7mtz.cloudfront.net/img/SonySpeaker.jpg" alt="Speaker Image">
             <div>
               <h3 class="mb-0.5 text-gray-800">Turn on the speaker</h3>
               <p class="text-gray-500 text-xs">Hold down the power button at the top of the speaker for three seconds until you hear the "power on" sound. If you don't hear anything, the speaker is probably out of power, so connect it to the charging cable.</p>
